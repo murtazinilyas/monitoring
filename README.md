@@ -18,8 +18,6 @@
 
 ### Решение 1
 
-![]()
-
 *Последовательность комманд для установки Zabbix Server:*
 
 ```bash
@@ -35,6 +33,9 @@ sed -i 's/# DBPassword=/DBPassword=123456789/g' /etc/zabbix/zabbix_server.conf
 systemctl restart zabbix-server apache2
 systemctl enable zabbix-server apache2
 ```
+
+Результат:
+![Вход в админку](https://github.com/murtazinilyas/monitoring/blob/main/scshots/zab_t1_admin.png)
 
 ---
 
@@ -106,11 +107,11 @@ systemctl enable zabbix-agent
         state: restarted
 ```
 
-![]()
+![Список агентов](https://github.com/murtazinilyas/monitoring/blob/main/scshots/zab_t2_conf.png)
 
-![]()
+![Лог файл одного из хостов](https://github.com/murtazinilyas/monitoring/blob/main/scshots/zab_t2_log.png)
 
-![]()
+![Метрики хостов](https://github.com/murtazinilyas/monitoring/blob/main/scshots/zab_t2_metrics.png)
 
 ---
 
@@ -124,4 +125,4 @@ systemctl enable zabbix-agent
 
 ### Решение 3
 
-![]()
+![Метрики хоста на Win11](https://github.com/murtazinilyas/monitoring/blob/main/scshots/zab_t3.png)
